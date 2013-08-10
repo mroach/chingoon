@@ -1,0 +1,29 @@
+let chin_goon chins =
+  let  top_head  = " __________" in
+  let  eyes      = "(--[ .]-[ .]" in
+  let  fatty     = "(       O  )" in
+  let  slim      = "(_______O__)" in
+  let  fat       = "(          )" in
+  let  chin      = "(__________)" in
+  let rec gen_fat x l =
+    if (x <= 1) then l
+    else gen_fat (x - 1) (fat :: l)
+  in
+    [ top_head ; eyes ] @
+      (if (chins > 0) then
+           (fatty :: (gen_fat chins [chin]))
+       else
+           [slim])
+;;
+
+let print_list l = List.iter print_endline l ;;
+
+let run_chins chins =
+  print_list (chin_goon chins)
+;;
+
+let last_of_array x = Array.get x ((Array.length x) - 1) ;;
+
+run_chins (int_of_string (last_of_array Sys.argv));;
+[edit]
+

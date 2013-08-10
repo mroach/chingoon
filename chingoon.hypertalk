@@ -1,0 +1,14 @@
+function chingoon number_of_chins
+   if number_of_chins<0 then return "ERROR: chingoon can't have a negachin"
+   else if number_of_chins>10 then return "ERROR: more chins than a chinese phone book and also more than you'd want to spam IRC with"
+
+   put " __________" & return & "(--[ .]-[ .]" & return into chins
+   if number_of_chins=0 then return chins & "(_______O__)"
+   else put chins & "(       O  )" & return into chins
+
+   repeat number_of_chins-1
+      put chins & "(          )" & return into chins
+   end repeat
+
+   return chins & "(__________)"
+end chingoon

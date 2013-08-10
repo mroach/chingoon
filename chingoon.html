@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <script type="text/javascript">
+      var lines = [
+        " __________",
+        "(--[ .]-[ .]",
+        "(_______O__)",
+        "(       O  )",
+        "(          )",
+        "(__________)"
+      ];
+
+      function drawChins() {
+        var count  = parseInt(document.getElementById("count").value);
+        var output = lines.slice(0, 2);
+        if (count < 1) {
+          output.push(lines[2]);
+        } else {
+          output.push(lines[3]);
+          while (--count) output.push(lines[4]);
+          output.push(lines[5]);
+        }
+        document.getElementById("output").innerHTML = output.join("\n");
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="drawChins(); return false">
+      <input id="count" type="text" value="0" />
+      <input type="submit" />
+    </form>
+    <pre id="output"></pre>
+  </body>
+</html>

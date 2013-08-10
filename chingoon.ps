@@ -1,0 +1,26 @@
+% bkerley@liam ~/Documents/smokeyrepo/chingoon> echo 2 | gs -q chingoon.ps
+%  __________
+% (--[ .]-[ .]
+% (       O  )
+% (          )
+% (__________)
+
+/println {print (\n) print flush} def
+/userread {(%stdin) (r) file 128 string readline} def
+/top {( __________\n\(--[ .]-[ .]) println} def
+/mouf {(\(       O  \)) println} def
+/chin {(\(          \)) println} def
+/bot {(\(__________\)) println} def
+/spec {(\(_______O__\)) println} def
+
+userread pop cvi
+top
+dup 0 eq
+  {spec}
+  {mouf
+    1 sub {
+      chin
+    } repeat
+    bot
+  } ifelse
+quit

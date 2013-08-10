@@ -1,0 +1,18 @@
+define chins (x) {
+    print " __________\n"
+    print "(--[ .]-[ .]\n"
+    if (x == 0) {
+        print "(_______O__)\n"
+    } else {
+        print "(       O  )\n"
+        if (x > 1) {
+            for (i = 1; i < x; i++ ) {
+                print "(          )\n"
+            }
+        }
+        print "(__________)\n"
+    }
+}
+chins(0)
+chins(1)
+chins(2)
