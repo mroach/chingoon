@@ -74,6 +74,10 @@ Must produce the following image with a chin count of 0:
 * VBScript
 * C#
 * Pascal
+* Fortran
+* COBOL
+* Powershell
+* Lua
 
 #### sam
 
