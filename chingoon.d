@@ -1,5 +1,6 @@
 import std.stdio;
 import std.conv;
+import std.exception;
 
 pragma(msg, "Compiling the advanced chingoon generator");
 
@@ -18,6 +19,8 @@ void main(string[] args)
   {
     chins = to!int(args[1]);
   }
+
+  enforce(chins > 0, "Can't have a negachin");
 
   // begin goon printing
   writeln(TOP);

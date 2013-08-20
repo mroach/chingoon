@@ -78,6 +78,7 @@ Must produce the following image with a chin count of 0:
 * COBOL
 * Powershell
 * Lua
+* D
 
 #### sam
 
