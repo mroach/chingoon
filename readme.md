@@ -79,6 +79,7 @@ Must produce the following image with a chin count of 0:
 * Powershell
 * Lua
 * D
+* Go
 
 #### sam
 
