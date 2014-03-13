@@ -1,3 +1,7 @@
+IF EXISTS (select * from sys.Procedures where name = 'dbo.Chins')
+BEGIN
+  DROP PROCEDURE dbo.Chins
+END
 create procedure dbo.Chins (@chins int = 4)
 as
 begin
