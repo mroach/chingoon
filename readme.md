@@ -80,6 +80,7 @@ Must produce the following image with a chin count of 0:
 * Lua
 * D
 * Go
+* Elixir
 
 #### sam
 
